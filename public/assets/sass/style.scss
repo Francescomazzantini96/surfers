@@ -1,0 +1,481 @@
+@import "lib/variable.scss";
+
+.container {
+    max-width: 1140px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+
+    &.ico {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+body {
+    background-image: url("../image/hero-section/surfersco-hero-section.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow-x: hidden !important;
+    font-family: $font-secondary;
+    font-size: 16px;
+    line-height: 1.72;
+
+    header {
+        nav {
+
+            h1 a.navbar-brand,
+            h5.offcanvas-title {
+                font-family: $font-primary;
+                font-weight: 700;
+                font-style: normal;
+                font-optical-sizing: auto;
+                font-size: 30px;
+            }
+
+            .navbar-toggler {
+                background: rgba(255,255,255,.8);
+                padding: 0 7px;
+                height: 40px;
+            }
+
+            #navbarSupportedContent ul:not(.social) .nav-item .nav-link {
+                text-transform: uppercase;
+                font-family: $font-primary;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 14px;
+                margin: 0 2px;
+
+                &:hover {
+                    color: $color-accent-text;
+                    background: $color-accent;
+                }
+            }
+
+            .social {
+                list-style: none;
+                padding: 0;
+                img {
+                    width: 35px;
+                    height: 35px;
+                    transition: all 0.5s ease-in-out;
+
+                    &:hover {
+                        filter: invert(1);
+                    }
+                }
+            }
+
+            .offcanvas-body ul.navbar-nav li {
+                border: 1px dotted rgba(0, 0, 0, 0.5);
+                padding: 0;
+                border-left: 0;
+                border-right: 0;
+                border-top: 0;
+            }
+            .offcanvas-body .social {
+                padding: 0;
+                border-top: 1px dotted rgba(0,0,0,.5);
+                padding-top: 10px;
+
+                li {
+                    padding: 0 5px;
+                }
+            }
+
+        }
+    }
+
+    section {
+        margin-bottom: 200px;
+        @media screen and (max-width: 991px) {
+            margin-bottom: 125px;
+        }
+
+        &#hero-section {
+            margin-bottom: 0;
+
+            .banner {
+                height: 45vh;
+                display: flex;
+                align-items: center;
+
+                h2 {
+                    font-family: $font-tertiary;
+                    font-optical-sizing: auto;
+                    font-weight: 400;
+                    font-style: italic;
+                    font-size: 50px;
+
+                    @media screen and (max-width: 991px) {
+                        font-size: 35px;
+                    }
+                }
+
+                h3 {
+                    font-family: $font-tertiary;
+                    font-optical-sizing: auto;
+                    font-weight: 400;
+                    font-style: italic;
+                    font-size: 24px;
+                    color: #FFFFFF;
+
+                    @media screen and (max-width: 991px) {
+                        color: $color-active;
+                    }
+                }
+            }
+        }
+
+        &#features {
+
+            .bg-white {
+                background-image: url("../image/tab/surfersco-tabs-sfondo.png");
+                background-position: left top;
+                background-repeat: no-repeat;
+                background-size: auto;
+                position: relative;
+                z-index: 0;
+
+                @media screen and (max-width: 991px) {
+                    padding: 15px;
+                }
+
+                &:after {
+                    content: "Boards";
+                    bottom: 0;
+                    right: 0;
+                    position: absolute;
+                    font-size: 127px;
+                    line-height: 0.7;
+                    transform: rotate(-90deg);
+                    height: 100%;
+                    aspect-ratio: 1 / 1;
+                    display: flex;
+                    text-transform: uppercase;
+                    align-items: flex-end;
+                    justify-content: center;
+                    font-family: $font-primary;
+                    font-optical-sizing: auto;
+                    font-weight: 700;
+                    letter-spacing: 11px;
+                    opacity: 0.04;
+                    z-index: -1;
+                }
+
+                #v-pills-tab .nav-link {
+                    border: 1px solid $color-tab-text;
+                    margin: 2px;
+
+                    &.active,
+                    &:hover {
+
+                        border: 2px solid $color-accent;
+                    }
+                }
+
+                h4 {
+                    font-family: $font-primary;
+                    font-optical-sizing: auto;
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: 20px;
+                }
+
+                .counter {
+                    font-family: $font-primary;
+                    font-optical-sizing: auto;
+                    font-weight: 400;
+                    font-style: normal;
+                    background-color: $color-active;
+                    color: $color-accent-text;
+                    display: inline;
+                    padding: 6px 9px;
+                }
+
+                #myTab button {
+                    text-transform: uppercase;
+                    font-family: $font-secondary;
+                    font-optical-sizing: auto;
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: 14px;
+                    color: $color-inactive;
+                    border: 0;
+                    padding: 8px 10px;
+                    &:hover {
+                        border-bottom: 2px solid $color-inactive;
+                    }
+
+                    &.active {
+                        color: $color-active;
+                        border-bottom: 2px solid $color-accent;
+                    }
+                }
+
+                #myTabContent {
+                    min-height: 210px;
+
+                    p {
+                        padding: 20px 0;
+                        color: $color-tab-text;
+                    }
+                }
+                p.buy {
+                    font-family: $font-secondary;
+                    font-optical-sizing: auto;
+                    font-weight: 700;
+                    font-style: normal;
+
+                    .price {
+                        font-size: 24px;
+                        color: $color-active;
+                        margin-bottom: 0;
+                        margin-right: 10px;
+                    }
+
+                    a {
+                        text-transform: uppercase;
+                        background-color: $color-accent;
+                        color: $color-accent-text;
+                        border: 0;
+                        font-size: 14px;
+                        border-radius: 0;
+                    }
+                }
+
+                a.view-all {
+                    text-underline-offset: 4px;
+                    color: $color-accent;
+                    font-family: $font-primary;
+                    font-optical-sizing: auto;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 16px;
+                }
+            }
+
+            .frecce {
+                position: absolute;
+                width: 80px;
+                top: 4rem;
+                right: 0;
+                transform: translateX(50%);
+
+                button {
+                    background-color: $color-pulsanti-frecce;
+                    color: $color-icone-frecce;
+                    padding: 8px 12px;
+                    aspect-ratio: 1 / 1;
+                    border: 0;
+                    width: 40px;
+                    height: 40px;
+                    transition: all 0.2s ease-in-out;
+                    opacity: 1;
+
+                    &:hover {
+                        filter:grayscale(1)
+                    }
+                }
+
+                @media screen and (max-width: 991px) {
+                    top: 0;
+                    right: 0;
+                    transform: none;
+                }
+            }
+        }
+
+        &#about-us {
+
+            .title h2 {
+                font-size: 196px;
+                font-size: 9vw;
+                line-height: 0.7;
+                font-family: $font-primary;
+                font-optical-sizing: auto;
+                font-weight: 700;
+                letter-spacing: 11px;
+                opacity: 0.04;
+                text-transform: uppercase;
+
+                @media screen and (max-width: 991px) {
+                    font-size: 15vw;
+                    letter-spacing: 0px;
+                    opacity: 0.08;  
+                }
+            }
+
+            .sfondo {
+                background-image: url("../image/about-us/surfersco-about-us.jpg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: top center;
+
+                .empty-space {
+                    height: 285px;
+                    @media screen and (max-width: 991px) {
+                        width: 100%;
+                        aspect-ratio: 3 / 1;
+                        height: auto;
+                    }
+
+                }
+
+                .bg-white {
+                    position: relative;
+                    z-index: 0;
+
+                    &:after {
+                        position: absolute;
+                        width: 50vw;
+                        height: 100%;
+                        right: 0;
+                        top: 0;
+                        content: "";
+                        background-color: $color-accent-text;
+                        z-index: -1;
+
+                    }
+                }
+
+                h3 {
+                    font-family: $font-primary;
+                    font-optical-sizing: auto;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 18px;
+                }
+
+                p {
+                    padding-top: 10px;
+                    font-family: $font-tertiary;
+                    font-optical-sizing: auto;
+                    font-weight: 400;
+                    font-size: 23px;
+                    font-style: italic;
+                }
+                a {
+                    text-underline-offset: 4px;
+                    color: $color-accent;
+                    font-family: $font-primary;
+                    font-optical-sizing: auto;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &#contact-us {
+            margin-bottom: 0;
+
+            h2 {
+                font-size: 76px;
+                line-height: 0.7;
+                font-family: $font-primary;
+                font-optical-sizing: auto;
+                font-weight: 700;
+                letter-spacing: 11px;
+                opacity: 0.04;
+                text-transform: uppercase;
+
+                @media screen and (max-width: 991px) {
+                    font-size: 12vw;
+                    letter-spacing: 0;
+                    opacity: 0.08;
+                }
+            }
+
+            .carousel-instagram {
+                position: absolute;
+
+                @media screen and (max-width: 991px) {
+                    position: relative;
+                    margin-bottom: 50px;
+                }
+
+                a {
+                    padding: 21px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                    text-decoration: none;
+                    font-family: $font-secondary;
+                    font-optical-sizing: auto;
+                    font-weight: 400;
+                    color: $color-active;
+
+                    .ico {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    span.follow-us {
+                        color: $color-accent;
+                        font-family: $font-quaternary;
+                        font-size: 24px;
+                        padding: 0 10px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            form .form-check-label {
+                font-size: 14px;
+                font-family: $font-primary;
+                font-optical-sizing: auto;
+                font-weight: 400;
+            }
+            input {
+                border-radius: 0;
+                font-family: $font-primary;
+                font-optical-sizing: auto;
+                font-size: 18px;
+                color: $color-active;
+                font-weight: 400;
+
+                &[type="submit"] {
+                    color: $color-accent-text;
+                    background-color: $color-accent;
+                    border: $color-accent;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-family: $font-primary;
+                    font-weight: 700;
+                    font-optical-sizing: auto;
+                    padding: 16px 75px;
+                }
+            }
+        }
+    }
+
+    footer {
+        padding-bottom: 100px;
+
+        @media screen and (max-width: 991px) {
+            padding-bottom: 3rem;
+        }
+
+        ul li {
+            list-style: none;
+
+            .ico {
+                width: 20px;
+                margin-right: 5px;
+            }
+
+            a {
+                color: $color-accent-text;
+                text-decoration: none;
+                font-family: $font-secondary;
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+    }
+}
