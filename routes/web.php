@@ -13,6 +13,7 @@ Route::get('/', function () {
 
 Route::get('surfersMail', function () {
     $user = User::get()->first();
-    $mail = new SurfersMail($user);
-    Mail::send($mail);
+    return new SurfersMail($user);
+    //$mail = new SurfersMail($user);
+    //Mail::send($mail);
 });
