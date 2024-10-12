@@ -15,7 +15,7 @@ img {
 }
 
 body {
-    background-image: url("../image/hero-section/surfersco-hero-section.jpg");
+    background-image: url("/assets/image/hero-section/surfersco-hero-section.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     overflow-x: hidden !important;
@@ -134,7 +134,7 @@ body {
         &#features {
 
             .bg-white {
-                background-image: url("../image/tab/surfersco-tabs-sfondo.png");
+                background-image: url("/assets/image/tab/surfersco-tabs-sfondo.png");
                 background-position: left top;
                 background-repeat: no-repeat;
                 background-size: auto;
@@ -312,7 +312,7 @@ body {
             }
 
             .sfondo {
-                background-image: url("../image/about-us/surfersco-about-us.jpg");
+                background-image: url("/assets/image/about-us/surfersco-about-us.jpg");
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: top center;
