@@ -26,7 +26,7 @@ class ProductFactory extends Factory
             'rocker' => fake()->numberBetween(0, 10),
             'review' => fake()->numberBetween(0, 5),
             'price'  => fake()->randomFloat(2,100,1000),
-            'review_number'  => fake()->randomNumber(4, false)
+            'review_number'  => fake()->randomNumber(3, false)
         ];
     }
 }

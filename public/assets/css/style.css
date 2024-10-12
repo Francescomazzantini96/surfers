@@ -203,6 +203,7 @@ body section#features .bg-white h4 {
   font-weight: 700;
   font-style: normal;
   font-size: 20px;
+  min-height: 48px;
 }
 body section#features .bg-white .counter {
   font-family: "Montserrat", sans-serif;
